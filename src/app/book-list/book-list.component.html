@@ -1,0 +1,20 @@
+
+
+<!--{{books|json}}-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let book of books">
+      <div class="card">
+        <img src="assets/img/{{ book.surname }}.jpg" alt="" class="card-img-top h-200">
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.description }}</p>
+          <p class="card-text">Price:{{ book.price | currency:'USD' }}</p>
+
+          <a class="btn btn-primary btn-sm text-white" (click)=goToDetails(book)>Book Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
